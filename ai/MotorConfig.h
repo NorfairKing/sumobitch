@@ -1,3 +1,10 @@
+/*
+  SUMOBITCH Program
+ 
+ Auhtors:
+ Tom Sydney Kerckhove
+ Tim Gillis
+ */
 
 // Motor pins
 #define LEFT_ENABLE 3
@@ -5,4 +12,5 @@
 #define RIGHT_ENABLE 5
 #define RIGHT_PHASE 4
 #define MODE 7
+
 

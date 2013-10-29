@@ -1,8 +1,14 @@
+/*
+  SUMOBITCH Program
+ 
+ Auhtors:
+ Tom Sydney Kerckhove
+ Tim Gillis
+ */
+
 #include "Arduino.h"
 #include "SensorConfig.h"
 #include "Sensor.h"
-
-
 
 Sensor::Sensor()
 {
@@ -11,17 +17,28 @@ Sensor::Sensor()
   pinMode(LONG, INPUT);
 }
 
-void Sensor::isLeftOn()
+boolean Sensor::isLeftOn()
 {
- 
+  return digitalRead(SHORT_LEFT) == HIGH;
 }
 
-void Sensor::isRightOn()
+boolean Sensor::isRightOn()
 {
- 
+  return digitalRead(SHORT_RIGHT) == HIGH;
 }
 
-void Sensor::isAnyOn()
+boolean Sensor::isAnyOn()
 {
- 
+  return (isRightOn() || isLeftOn());
+}
+
+int Sensor::getLDValue()
+{
+  return analogRead(LONG); 
+}
+
+int Sensor::getLongSensorCm()
+{
+  int ldValue = getLDValue();
+  return (1. / ldValue); 
 }

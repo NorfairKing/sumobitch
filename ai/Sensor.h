@@ -1,3 +1,11 @@
+/*
+  SUMOBITCH Program
+ 
+ Auhtors:
+ Tom Sydney Kerckhove
+ Tim Gillis
+ */
+
 #ifndef Sensor_h
 #define Sensor_h
 
@@ -5,13 +13,15 @@
 
 class Sensor
 {
-  public:
-    Sensor();
-    void isLeftOn();
-    void isRightOn();
-    void isAnyOn();
-  private:
-    
+public:
+  Sensor();
+  boolean isLeftOn();
+  boolean isRightOn();
+  boolean isAnyOn();
+private:
+  int getLDValue();
+  int getLongSensorCm();
 };
 
 #endif
+
