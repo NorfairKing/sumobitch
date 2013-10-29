@@ -1,0 +1,8 @@
+
+// Motor pins
+#define MOTOR_LEFT_ENABLE 3
+#define MOTOR_LEFT_PHASE 2
+#define MOTOR_RIGHT_ENABLE 5
+#define MOTOR_RIGHT_PHASE 4
+#define MOTOR_MODE 7
+
