@@ -1,5 +1,4 @@
-Sumobitch
-===============
+#+TITLE: Sumobitch
 
 * Authors
   - Tim Gillis
