@@ -1,32 +1,29 @@
-#+TITLE: Sumobitch
-
 * Authors
   - Tim Gillis
   - Tom Sydney Kerckhove
 
 * Configuration
-** Config.h
-*** DEBUG (boolean)
-    Set this to on to debug the system.
-** MotorConfig.h
-*** LEFT_ENABLE (int)
-    The enable pin for the left motor
-*** LEFT_PHASE (int)
-    The phase pin for the left motor
-*** RIGHT_ENABLE (int)
-    The enable pin for the right motor
-*** RIGHT_PHASE (int)
-    The phase pin for the right motor
-*** MODE (int)
-    The mode pin for the motor controller
-** SensorConfig.h
-*** SHORT_LEFT (int)
-    The input pin for the left short-range motor.
-*** SHORT_RIGHT (int)
-    The input pin for the right short-range motor.
-*** LONG (int)
-    The input pin for the long-range motor.
-
+  - Config.h
+    - DEBUG (boolean)
+      Set this to on to debug the system.
+  - MotorConfig.h
+    - LEFT_ENABLE (int)
+      The enable pin for the left motor
+    - LEFT_PHASE (int)
+      The phase pin for the left motor
+    - RIGHT_ENABLE (int)
+      The enable pin for the right motor
+    - RIGHT_PHASE (int)
+      The phase pin for the right motor
+    - MODE (int)
+      The mode pin for the motor controller
+  - SensorConfig.h
+    - SHORT_LEFT (int)
+      The input pin for the left short-range motor.
+    - SHORT_RIGHT (int)
+      The input pin for the right short-range motor.
+    - LONG (int)
+      The input pin for the long-range motor.
 * Installation
 ** Motors
 For both motors the following needs to be done
@@ -43,17 +40,15 @@ For both motors the following needs to be done
      - Connect the output pin to a digital pin on the arduino
    - Long range
      - Connect the output pin to an analog pin on the arduino
-
-
 * File manifest
-** ai
-** Config.h
-** Motor.cpp
-** Motor.h
-** MotorConfig.h
-** Sensor.cpp
-** Sensor.h
-** SensorConfig.h
+  - ai
+  - Config.h
+  - Motor.cpp
+  - Motor.h
+  - MotorConfig.h
+  - Sensor.cpp
+  - Sensor.h
+  - SensorConfig.h
 
 
 * Known Issues
