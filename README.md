@@ -1,30 +1,61 @@
 Sumobitch
 ===============
 
+* Authors
+  - Tim Gillis
+  - Tom Sydney Kerckhove
 
-    name of the projects and all sub-modules and libraries (sometimes they are named different and very confusing to new users)
-    descriptions of all the project, and all sub-modules and libraries
-    5-line code snippet on how its used (if it's a library)
-    copyright and licensing information (or "Read LICENSE")
-    instruction to grab the documentation
-    instructions to install, configure, and to run the programs
-    instruction to grab the latest code and detailed instructions to build it (or quick overview and "Read INSTALL")
-    list of authors or "Read AUTHORS"
-    instructions to submit bugs, feature requests, submit patches, join mailing list, get announcements, or join the user or dev community in other forms
-    other contact info (email address, website, company name, address, etc)
-    a brief history if it's a replacement or a fork of something else
-    legal notices (crypto stuff)
+* Configuration
+** Config.h
+*** DEBUG (boolean)
+    Set this to on to debug the system.
+** MotorConfig.h
+*** LEFT_ENABLE (int)
+    The enable pin for the left motor
+*** LEFT_PHASE (int)
+    The phase pin for the left motor
+*** RIGHT_ENABLE (int)
+    The enable pin for the right motor
+*** RIGHT_PHASE (int)
+    The phase pin for the right motor
+*** MODE (int)
+    The mode pin for the motor controller
+** SensorConfig.h
+*** SHORT_LEFT (int)
+    The input pin for the left short-range motor.
+*** SHORT_RIGHT (int)
+    The input pin for the right short-range motor.
+*** LONG (int)
+    The input pin for the long-range motor.
+
+* Installation
+** Motors
+For both motors the following needs to be done
+    - TODO
+** Motor controller
+   - Connect the mode pin of the controller to a 
+   - For both motors
+     - Connect the phase pin of the controller with a "~" pin on the arduino
+     - Connect the enable pin of the controller with a digital pin on the arduino
+** Sensors
+   - Short range
+     - Connect the Power pin to the 5V pin on the arduino
+     - Connect the ground pin to the ground pin on the arduino
+     - Connect the output pin to a digital pin on the arduino
+   - Long range
+     - Connect the output pin to an analog pin on the arduino
 
 
+* File manifest
+** ai
+** Config.h
+** Motor.cpp
+** Motor.h
+** MotorConfig.h
+** Sensor.cpp
+** Sensor.h
+** SensorConfig.h
 
-        configuration instructions
-        installation instructions
-        operating instructions
-        a file manifest
-        copyright and licensing information
-        contact information for the distributor or programmer
-        known bugs
-        troubleshooting
-        credits and acknowledgements
-        a changelog
 
+* Known Issues
+  Nothing works yet.
