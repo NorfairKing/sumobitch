@@ -21,29 +21,47 @@ Motor::Motor()
   motorOn();
 }
 
-void Motor::leftForward(int speed)
+void Motor::leftForward()
 {
+  int fw = 0;
   digitalWrite(LEFT_ENABLE,HIGH);
-  analogWrite(LEFT_PHASE,speed);
+  analogWrite(LEFT_PHASE,fw);
 }
 
-void Motor::leftBack(int speed)
+void Motor::leftBack()
 {
+  int back = 255;
+  digitalWrite(LEFT_ENABLE,HIGH);
+  analogWrite(LEFT_PHASE,back);
+}
+
+void Motor::leftStop()
+{
+  int stp = 128;
   digitalWrite(LEFT_ENABLE,LOW);
-  analogWrite(LEFT_PHASE,speed);
+  analogWrite(LEFT_PHASE,stp);
 }
-
-void Motor::rightForward(int speed)
+void Motor::rightForward()
 {
+  int fw = 0;
   digitalWrite(RIGHT_ENABLE,HIGH);
-  analogWrite(RIGHT_PHASE,speed);
+  analogWrite(RIGHT_PHASE,fw);
 }
 
-void Motor::rightBack(int speed)
+void Motor::rightBack()
 {
-  digitalWrite(RIGHT_ENABLE,LOW);
-  analogWrite(RIGHT_PHASE,speed);
+  int back = 255;
+  digitalWrite(RIGHT_ENABLE,HIGH);
+  analogWrite(RIGHT_PHASE,back);
 }
+
+void Motor::rightStop()
+{
+  int stp = 128;
+  digitalWrite(RIGHT_ENABLE,LOW);
+  analogWrite(RIGHT_PHASE,stp);
+}
+
 
 void Motor::motorOn()
 {

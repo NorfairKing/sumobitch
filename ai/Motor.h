@@ -15,10 +15,12 @@ class Motor
 {
 public:
   Motor();
-  void leftForward(int speed);
-  void leftBack(int speed);
-  void rightForward(int speed);
-  void rightBack(int speed);
+  void leftForward();
+  void leftBack();
+  void leftStop();
+  void rightForward();
+  void rightBack();
+  void rightStop();
 private:
   void motorOn();
   void motorOff();
