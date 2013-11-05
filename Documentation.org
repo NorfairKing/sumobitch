@@ -1,0 +1,13 @@
+* Motors
+
+- To activate a motor:
+#+BEGIN_EXAMPLE
+ digitalWrite(MOTOR_ENABLE,HIGH)
+#+END_EXAMPLE
+- To Deactivate a motor:
+#+BEGIN_EXAMPLE
+ digitalWrite(MOTOR_ENABLE,LOW)
+#+END_EXAMPLE
+
+
+* Sensors
