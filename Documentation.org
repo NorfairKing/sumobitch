@@ -1,13 +1,24 @@
 * Motors
 
-- To activate a motor:
+- Activate a motor:
 #+BEGIN_EXAMPLE
  digitalWrite(MOTOR_ENABLE,HIGH)
 #+END_EXAMPLE
-- To Deactivate a motor:
+- Deactivate a motor:
 #+BEGIN_EXAMPLE
  digitalWrite(MOTOR_ENABLE,LOW)
 #+END_EXAMPLE
-
+- Make a motor go forward:
+#+BEGIN_EXAMPLE
+ analogWrite(MOTOR_PHASE,0)
+#+END_EXAMPLE
+- Make a motor go backward:
+#+BEGIN_EXAMPLE
+ analogWrite(MOTOR_PHASE,255)
+#+END_EXAMPLE
+- Make a motor stop:
+#+BEGIN_EXAMPLE
+ analogWrite(MOTOR_PHASE,128)
+#+END_EXAMPLE
 
 * Sensors
