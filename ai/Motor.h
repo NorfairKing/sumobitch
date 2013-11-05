@@ -21,9 +21,6 @@ public:
   void rightForward();
   void rightBack();
   void rightStop();
-private:
-  void motorOn();
-  void motorOff();
 };
 
 #endif

@@ -27,9 +27,10 @@
 * Installation
 ** Motors
 For both motors the following needs to be done
-    - TODO
+Motor A is Right, motor B is left.
+    - Connect the motor wires to the O1 and O2 on the motor controller.
 ** Motor controller
-   - Connect the mode pin of the controller to a 
+   - Connect the mode pin of the controller to a 5V pin on the arduino 
    - For both motors
      - Connect the phase pin of the controller with a "~" pin on the arduino
      - Connect the enable pin of the controller with a digital pin on the arduino
@@ -40,6 +41,7 @@ For both motors the following needs to be done
      - Connect the output pin to a digital pin on the arduino
    - Long range
      - Connect the output pin to an analog pin on the arduino
+** Battery Pack
 * File manifest
   - ai
   - Config.h
@@ -49,7 +51,8 @@ For both motors the following needs to be done
   - Sensor.cpp
   - Sensor.h
   - SensorConfig.h
-
+  - Test.cpp
+  - Test.h
 
 * Known Issues
   Nothing works yet.

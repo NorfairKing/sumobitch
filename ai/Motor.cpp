@@ -17,8 +17,6 @@ Motor::Motor()
   pinMode(RIGHT_ENABLE, OUTPUT);
   pinMode(RIGHT_PHASE, OUTPUT);
   pinMode(MODE, OUTPUT);
-
-  motorOn();
 }
 
 void Motor::leftForward()
@@ -60,17 +58,6 @@ void Motor::rightStop()
   int stp = 128;
   digitalWrite(RIGHT_ENABLE,LOW);
   analogWrite(RIGHT_PHASE,stp);
-}
-
-
-void Motor::motorOn()
-{
-  digitalWrite(MODE,HIGH);
-}
-
-void Motor::motorOff()
-{
-  digitalWrite(MODE,LOW);
 }
 
 
