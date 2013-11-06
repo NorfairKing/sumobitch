@@ -24,4 +24,7 @@ void Led::ledOff()
   digitalWrite(LED_PIN,LOW);
 }
 
-
+void Led::ledCountDown()
+{
+  
+}

@@ -17,6 +17,7 @@ public:
   Led();
   void ledOn();
   void ledOff();
+  void ledCountDown();
 };
 
 #endif

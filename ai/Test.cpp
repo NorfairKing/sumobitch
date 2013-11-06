@@ -35,7 +35,7 @@ void Test::testEverything()
 {
   Serial.println("Starting tests");
   testMotors();
-  testSensors();
+  //testSensors();
   testLed();
   Serial.println("Testing done");
 }
@@ -130,7 +130,7 @@ void Test::testSensorShortLeft()
   Serial.println("For the next ten seconds, you can test the left short-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 100; i++)
+  for(int i = 0; i < 1000; i++)
   {
     boolean result = sensor.isLeftInRing();
     if (result)
@@ -152,7 +152,7 @@ void Test::testSensorShortRight()
   Serial.println("For the next ten seconds, you can test the right short-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 100; i++)
+  for(int i = 0; i < 1000; i++)
   {
     boolean result = sensor.isLeftInRing();
     if (result)
@@ -170,13 +170,14 @@ void Test::testSensorShortRight()
 void Test::testSensorLong()
 {
   Serial.println("Starting long-range sensor tests");
-  Serial.println("For the next ten seconds, you can test the right short-range sensor");
+  Serial.println("For the next ten seconds, you can test the long-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 100; i++)
+  Serial.println(String(sensor.getLDValue()));
+  for(int i = 0; i < 1000; i++)
   {
-     int result = sensor.getLDValue();
-     Serial.println("The long-distance sensor detects a value of " + String(result));
+     Serial.print("The long-distance sensor detects a value of ");
+     Serial.println(String(sensor.getLDValue()));
      delay(10);
   }
   Serial.println("Long-range sensor tests done");

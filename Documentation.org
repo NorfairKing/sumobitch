@@ -41,3 +41,6 @@ The motor controls are a little bit weird. Here are the commands that you can us
 ** Long-range Sensors
    The long-range sensors are used to check if the robot can see the other robot.
    The distance to the other robot is rather inaccurate, so we will only check whether the other robot can be seen.
+   
+   We'll take 20 as the threshold value for seeing the other robot.
+   We take the mean of 50 values to determine this

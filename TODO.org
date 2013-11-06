@@ -12,10 +12,16 @@
 * Testing
 ** STARTED Level one: Stationary Hardware Interface
    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+   CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
+   CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
+   CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58
 *** TODO Motors
     SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+**** TODO Angular turning method
 *** TODO Sensors
     SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+**** TODO Mean evaluated sensor value.
+
 ** TODO Level two: Mobile Movement and Mobile Sensing
    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
 ** TODO Level three: AI vs Stationary Opponent
@@ -24,4 +30,5 @@
 ** TxODO Level four: AI vs AI
 *** TODO Shedule this
     SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+    
     
