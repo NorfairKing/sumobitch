@@ -1,0 +1,27 @@
+#+SEQ_TODO: TODO(t) TODAY(o) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
+
+* Building
+** DONE Motors
+   CLOSED: [2013-11-06 Mit 08:01] SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-04 Mon>
+** TODO Sensors
+   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+*** TODO Short Range Sensors
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+*** TODO Long Range Sensor
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+* Testing
+** STARTED Level one: Stationary Hardware Interface
+   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+*** TODO Motors
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+*** TODO Sensors
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+** TODO Level two: Mobile Movement and Mobile Sensing
+   SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+** TODO Level three: AI vs Stationary Opponent
+*** TODO Shedule this
+    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+** TxODO Level four: AI vs AI
+*** TODO Shedule this
+    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+    

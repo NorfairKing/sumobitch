@@ -1,0 +1,13 @@
+#+SEQ_TODO: TODO(t) TODAY(o) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
+
+* Testing
+** Level one: Stationary Hardware Interface
+   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+** TODO Level two: Mobile Movement and Mobile Sensing
+   SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+** TODO Level three: AI vs Stationary Opponent
+*** TODO Shedule this
+    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+** TODO Level four: AI vs AI
+*** TODO Shedule this
+    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
