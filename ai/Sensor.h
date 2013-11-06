@@ -18,11 +18,10 @@ public:
   boolean isLeftInRing();
   boolean isRightInRing();
   boolean AnyOutOfRing();
+  int getLDValue();
 private:
   boolean isLeftOn(); 
   boolean isRightOn();
-  int getLDValue();
-  int getLongSensorCm();
 };
 
 #endif

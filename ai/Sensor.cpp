@@ -46,9 +46,3 @@ int Sensor::getLDValue()
 {
   return analogRead(LONG); 
 }
-
-int Sensor::getLongSensorCm()
-{
-  int ldValue = getLDValue();
-  return (1. / ldValue); 
-}
