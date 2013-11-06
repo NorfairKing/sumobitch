@@ -22,14 +22,24 @@ boolean Sensor::isLeftOn()
   return digitalRead(SHORT_LEFT) == HIGH;
 }
 
+boolean Sensor::isLeftInRing()
+{
+  return isLeftOn() == IN_RING_VALUE;
+}
+
 boolean Sensor::isRightOn()
 {
   return digitalRead(SHORT_RIGHT) == HIGH;
 }
 
-boolean Sensor::isAnyOn()
+boolean Sensor::isRightInRing()
 {
-  return (isRightOn() || isLeftOn());
+   return isRightOn() == IN_RING_VALUE; 
+}
+
+boolean Sensor::AnyOutOfRing()
+{
+  return  !isLeftInRing() || !isRightInRing();
 }
 
 int Sensor::getLDValue()

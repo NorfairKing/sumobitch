@@ -42,6 +42,13 @@ Motor A is Right, motor B is left.
    - Long range
      - Connect the output pin to an analog pin on the arduino
 ** Battery Pack
+   - Connect the 9V wire of the of the battery pack to the V_n pin on the arduino.
+   - Connect the ground wire of the battery packt to the ground pin on the arduino.
+** Countdown Led
+   We need to have a countdown led according to the rules.
+   We can either use the led on pin 13  for this, or install one of our own.
+   I prefer the latter but we need to check whether we can fit that on the circuit bord.
+
 * File manifest
   - ai
   - Config.h

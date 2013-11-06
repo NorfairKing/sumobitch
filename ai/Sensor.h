@@ -15,10 +15,12 @@ class Sensor
 {
 public:
   Sensor();
-  boolean isLeftOn();
-  boolean isRightOn();
-  boolean isAnyOn();
+  boolean isLeftInRing();
+  boolean isRightInRing();
+  boolean AnyOutOfRing();
 private:
+  boolean isLeftOn(); 
+  boolean isRightOn();
   int getLDValue();
   int getLongSensorCm();
 };

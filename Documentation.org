@@ -1,24 +1,43 @@
 * Motors
+The motor controls are a little bit weird. Here are the commands that you can use to control the motors.
 
-- Activate a motor:
-#+BEGIN_EXAMPLE
- digitalWrite(MOTOR_ENABLE,HIGH)
-#+END_EXAMPLE
-- Deactivate a motor:
-#+BEGIN_EXAMPLE
- digitalWrite(MOTOR_ENABLE,LOW)
-#+END_EXAMPLE
-- Make a motor go forward:
-#+BEGIN_EXAMPLE
- analogWrite(MOTOR_PHASE,0)
-#+END_EXAMPLE
-- Make a motor go backward:
-#+BEGIN_EXAMPLE
- analogWrite(MOTOR_PHASE,255)
-#+END_EXAMPLE
-- Make a motor stop:
-#+BEGIN_EXAMPLE
- analogWrite(MOTOR_PHASE,128)
-#+END_EXAMPLE
+- The activation of a motor is controlled with its enable pin.
+  - Activate a motor:
+    #+BEGIN_EXAMPLE
+    digitalWrite(MOTOR_ENABLE,HIGH)
+    #+END_EXAMPLE
+  - Deactivate a motor:
+    #+BEGIN_EXAMPLE
+    digitalWrite(MOTOR_ENABLE,LOW)
+    #+END_EXAMPLE
+
+- The speed of a motor is especially weird to control.
+  - Make a motor go forward
+    To the motor controller, $0$ means "go forward as hard as you can!".
+    #+BEGIN_EXAMPLE
+    analogWrite(MOTOR_PHASE,0)
+    #+END_EXAMPLE
+  - Make a motor go backward:
+    $255$ is the value that, to the controller, means "go backward as hard as you can!".
+    #+BEGIN_EXAMPLE
+    analogWrite(MOTOR_PHASE,255)
+    #+END_EXAMPLE
+  - Make a motor stop:
+    This is perhaps the weirdest part. To stop a motor, set the phase value to $12$
+    #+BEGIN_EXAMPLE
+    analogWrite(MOTOR_PHASE,128)
+    #+END_EXAMPLE
 
 * Sensors
+** Short-range Sensors
+   The short-range sensors are only used to check if the motor is still in the ring.
+   By default, an on signal means that the sensor is still in the ring but this is configurable.
+    #+BEGIN_EXAMPLE
+    isWithinRing = digitalRead(SHORT_SENSOR_PIN) == IN_RING_VALUE
+    #+END_EXAMPLE
+
+   
+
+** Long-range Sensors
+   The long-range sensors are used to check if the robot can see the other robot.
+   The distance to the other robot is rather inaccurate, so we will only check whether the other robot can be seen.

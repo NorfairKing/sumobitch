@@ -19,6 +19,7 @@ public:
 private:
   void testMotors();
   void testSensors();
+  void testLed();
   
   void testMotorLeft();
   void testMotorRight();

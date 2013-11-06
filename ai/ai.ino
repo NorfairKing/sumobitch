@@ -13,7 +13,10 @@
 #include "Motor.h"
 
 // Import the sensor class.
-//#include "Sensor.h"
+#include "Sensor.h"
+
+// Import the led class.
+#include "Led.h"
 
 // Import the test class.
 #include "Test.h"
@@ -22,7 +25,10 @@
 Motor motor;
 
 // Initialize the sensors
-//Sensor sensor;
+Sensor sensor;
+
+// Initialize the led
+Led led;
 
 // Initialize the tests
 Test test;
@@ -42,12 +48,13 @@ void setup()
 // Loop the main program.
 void loop()
 {
-  Serial.println("Looping");
+  Serial.println("Starting loop");
   
   if (!done){
   test.testEverything();
   }
   done = true;
   delay(1000);
+  Serial.println("Loop done");
 }
 

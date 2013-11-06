@@ -7,7 +7,8 @@
  */
 
 // Sensor pins
-#define SHORT_LEFT 12
-#define SHORT_RIGHT 13
+#define SHORT_LEFT 7
+#define SHORT_RIGHT 8
 #define LONG A0
 
+#define IN_RING_VALUE true

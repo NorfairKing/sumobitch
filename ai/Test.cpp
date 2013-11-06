@@ -18,8 +18,12 @@
 // Import the Test configurations
 #include "TestConfig.h"
 
+// Import the Led configurations
+#include "Led.h"
+
 extern Motor motor;
 extern Sensor sensor;
+extern Led led;
 
 #include "Test.h"
 
@@ -33,6 +37,7 @@ void Test::testEverything()
   // Test Everything
   testMotors();
   testSensors();
+  testLed();
   Serial.println("Testing done");
 }
 
@@ -46,6 +51,29 @@ void Test::testMotors()
   // Test Both
   testMotorTogether();
   Serial.println("Motor tests done");
+}
+
+void Test::testSensors()
+{
+  Serial.println("Starting sensor tests");
+  // Test short range sensors
+  testSensorShortLeft();
+  testSensorShortRight();
+  // Test long range sensor
+  testSensorLong();
+  Serial.println("Sensor tests done");
+}
+
+void Test::testLed()
+{
+  Serial.println("Starting led tests");
+  Serial.println("The led should be on now");
+  led.ledOn(); 
+  delay(TEST_SHORT);
+  Serial.println("The led should be off now");
+  led.ledOff(); 
+  delay(TEST_SHORT);
+  Serial.println("Led tests done");
 }
 
 void Test::testMotorLeft()
@@ -95,23 +123,14 @@ void Test::testMotorTogether()
   motor.leftForward();
   motor.rightBack();
   delay(TEST_LONG);
-  Serial.print("Both wheels should have stopped now")
+  Serial.print("Both wheels should have stopped now");
     motor.leftStop();
   motor.rightStop();
   delay(TEST_LONG);
   Serial.println("Motor tests together done");
 }
 
-void Test::testSensors()
-{
-  Serial.println("Starting sensor tests");
-  // Test short range sensors
-  testSensorShortLeft();
-  testSensorShortRight();
-  // Test long range sensor
-  testSensorLong();
-  Serial.println("Sensor tests done");
-}
+
 
 void Test::testSensorShortLeft()
 {
@@ -131,6 +150,7 @@ void Test::testSensorLong()
 
   Serial.println("Long-range sensor tests done");
 }
+
 
 
 
