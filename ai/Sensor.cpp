@@ -10,7 +10,6 @@
 #include "SensorConfig.h"
 #include "Sensor.h"
 
-
 int ldpt;
 int ldResults [PRECISION];
 
@@ -23,12 +22,12 @@ Sensor::Sensor()
   pinMode(SHORT_RIGHT, INPUT);
   pinMode(LONG, INPUT);
 
+int ldResults [PRECISION];
   ldpt = 0;
   for(int i=0; i < PRECISION; i++)
   {
     ldResults[i] = 0;
   }
-
   left = true;
   right = true;
 }
@@ -56,7 +55,7 @@ void Sensor::senseSD()
 
 boolean Sensor::canSeeEnemy()
 {
-  return avg(ldResults,PRECISION) >= THRESHOLD;
+  return avg(ldResults, PRECISION) >= THRESHOLD;
 }
 
 boolean Sensor::isLeftInRing()
@@ -81,7 +80,7 @@ boolean Sensor::isRightOn()
   return digitalRead(SHORT_RIGHT) == HIGH;
 }
 
-int avg(int array[], int len)
+int Sensor::avg(int array[], int len)
 {
   int res = 0;
   for( int i=0;i<len;i++){

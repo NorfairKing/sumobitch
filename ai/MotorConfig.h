@@ -7,10 +7,9 @@
  */
 
 // Motor pins
-#define LEFT_ENABLE 4
+#define LEFT_ENABLE 2
 #define LEFT_PHASE 3
-#define RIGHT_ENABLE 12
-#define RIGHT_PHASE 11
-#define MODE 7
+#define RIGHT_ENABLE 4
+#define RIGHT_PHASE 5
 
 #define DEFAULT_SPEED 100

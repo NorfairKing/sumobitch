@@ -23,13 +23,13 @@ public:
 private:
   void senseLD();
   void senseSD();
-  int ldResults [];
+  int ldpt;
+  int ldResults[];
   int getLDAnalogValue();
   boolean left;
   boolean right;
   boolean isLeftOn(); 
   boolean isRightOn();
-  
   int avg(int array[], int len);
 };
 

@@ -29,7 +29,7 @@ extern Led led;
 
 Test::Test()
 {
-  Serial.begin(9600);
+  Serial.println("Set up tests.");
 }
 
 void Test::testEverything()
@@ -53,8 +53,8 @@ void Test::testMotors()
 void Test::testSensors()
 {
   Serial.println("Starting sensor tests");
-  testSensorShortLeft();
-  testSensorShortRight();
+  //testSensorShortLeft();
+  //testSensorShortRight();
   testSensorLong();
   Serial.println("Sensor tests done");
 }
@@ -68,6 +68,7 @@ void Test::testLed()
   Serial.println("The led should be off now");
   led.ledOff(); 
   delay(TEST_SHORT);
+  Serial.println("The led should be counting down now");
   Serial.println("Led tests done");
 }
 
@@ -80,7 +81,7 @@ void Test::testMotorLeft()
   Serial.println("The left wheel should be turning backward now");
   motor.leftBack();
   delay(TEST_SHORT);
-  Serial.println("The right wheel should not be turning now");
+  Serial.println("The left wheel should not be turning now");
   motor.leftStop();
   delay(TEST_SHORT);
   Serial.println("Motor tests left done");

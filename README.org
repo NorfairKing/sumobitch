@@ -25,6 +25,17 @@
     - LONG (int)
       The input pin for the long-range motor.
 * Installation
+** Wiring
+   - Vin = Red
+   - GND = Black
+   - Sensors
+     - Short = Yellow
+     - Long = White
+   - Motors -> Own wires
+   - MotorController
+     - Mode = Red
+     - Phase = Purple
+     - Enable = Brown
 ** Motors
 For both motors the following needs to be done
 Motor A is Right, motor B is left.

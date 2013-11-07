@@ -39,27 +39,33 @@ void xActionTrigger(int id=0, int action=0) {
   xActionsFlags[id] = action;
 }
 
+
+
 boolean done;
 void setup() {
-  if (TESTING)
-    done = false;
-
+  Serial.begin(9600);
+  Serial.println("Set up serial");
+  
+  done = false;
 
   xActionTrigger(0,1); // sense
   xActionTrigger(1,1); // scheduleAI
   xActionTrigger(2,1); // runAI
 }
 
+
+
 void loop() {
   if (TESTING)
-  {
+ {
     if (!done)
       test.testEverything();
     done = true;
-  }
+    delay(1000);
+ }
   else
   {
-    xDoActions();
+   xDoActions();
   }
 }
 

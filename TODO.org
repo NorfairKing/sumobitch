@@ -1,8 +1,14 @@
 #+SEQ_TODO: TODO(t) TODAY(o) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
 
-* Building
-** DONE Motors
-   CLOSED: [2013-11-06 Mit 08:01] SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-04 Mon>
+* TODO Building
+** TODO Wiring
+   CLOCK: [2013-11-07 Don 12:31]--[2013-11-07 Don 14:27] =>  1:56
+   CLOCK: [2013-11-07 Don 11:46]--[2013-11-07 Don 12:23] =>  0:37
+   :PROPERTIES:
+   :ORDERED:  t
+   :END:
+** TODO Motors
+   SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-04 Mon>
 ** TODO Sensors
    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
 *** TODO Short Range Sensors
