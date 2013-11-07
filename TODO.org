@@ -12,6 +12,8 @@
 * Testing
 ** STARTED Level one: Stationary Hardware Interface
    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+   CLOCK: [2013-11-07 Don 09:41]--[2013-11-07 Don 10:18] =>  0:37
+   CLOCK: [2013-11-07 Don 09:26]--[2013-11-07 Don 09:34] =>  0:08
    CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
    CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
    CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58

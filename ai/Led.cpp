@@ -26,5 +26,16 @@ void Led::ledOff()
 
 void Led::ledCountDown()
 {
-  
+  // Blink 5 times
+  ledOn();
+  for(int i = 0; i < (COUNTDOWN_TIME - 1); i++)
+  {
+    delay(1000);
+    ledOff();
+    delay(1000);
+    ledOn();
+  }
 }
+
+
+

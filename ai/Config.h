@@ -6,6 +6,6 @@
  Tim Gillis
  */
 
-#define DEBUG true
+#define TESTING true
 
 

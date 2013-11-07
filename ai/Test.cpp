@@ -29,6 +29,7 @@ extern Led led;
 
 Test::Test()
 {
+  Serial.begin(9600);
 }
 
 void Test::testEverything()
@@ -132,6 +133,7 @@ void Test::testSensorShortLeft()
   delay(1000);
   for(int i = 0; i < 1000; i++)
   {
+    sensor.sense();
     boolean result = sensor.isLeftInRing();
     if (result)
     {
@@ -154,6 +156,7 @@ void Test::testSensorShortRight()
   delay(1000);
   for(int i = 0; i < 1000; i++)
   {
+    sensor.sense();
     boolean result = sensor.isLeftInRing();
     if (result)
     {
@@ -173,11 +176,18 @@ void Test::testSensorLong()
   Serial.println("For the next ten seconds, you can test the long-range sensor");
   Serial.println("GO!");
   delay(1000);
-  Serial.println(String(sensor.getLDValue()));
   for(int i = 0; i < 1000; i++)
   {
      Serial.print("The long-distance sensor detects a value of ");
-     Serial.println(String(sensor.getLDValue()));
+     sensor.sense();
+     if(sensor.canSeeEnemy())
+     {
+       Serial.println("The long-distance sensor sees the enemy");
+     }
+     else
+     {
+       Serial.println("The long distance sensor doesn't see anything");
+     }
      delay(10);
   }
   Serial.println("Long-range sensor tests done");

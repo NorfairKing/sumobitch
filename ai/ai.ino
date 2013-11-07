@@ -19,68 +19,17 @@ Sensor sensor;// Initialize the sensors
 Led led;// Initialize the led
 
 Test test;// Initialize the tests
-/*
-boolean done = false;
 
-
-// Set up the entire robot.
-void setup()
-{
-  Serial.println("Starting setup");
-
-  Serial.begin(9600);
-
-  Serial.println("Setup done");
-}
-
-// Loop the main program.
-void loop()
-{
-  Serial.println("Starting loop");
-  
-  int pt = 0;
-   int nb_of_results = 50;
-   int results [nb_of_results];
-   for( int i=0;i<nb_of_results;i++){
-   results[i]=0;
-   }
-   while(true)
-   {
-   results[pt] = sensor.getLDValue();
-   pt = (pt + 1) % nb_of_results;
-   Serial.println(String(avg(results,nb_of_results)));
-   }
-   
-
-  if (!done){
-    test.testEverything();
-  }
-  done = true;
-  delay(1000);
-  Serial.println("Loop done");
-}
-*/
-void sense()
-{
-
-}
-
-int avg(int array[], int len)
-{
-  int res = 0;
-  for( int i=0;i<len;i++){
-    res += array[i];
-  }
-  return res/len;
-}
 
 // Define a function pointer and initialize to NULL.
 typedef void (*FunctionPointer) ();
 
 // Declare looping actions function names, declared lower.
-FunctionPointer xActions[] = {loopActionA,loopActionB,loopActionC};
+FunctionPointer xActions[] = {
+  sense,scheduleAI,runAI};
 // Define actions status flags. Set to 1 to auto execute a start.
-int xActionsFlags[] = {0,0,0}; 
+int xActionsFlags[] = {
+  0,0,0}; 
 
 int xActionsCount = sizeof(xActions);
 
@@ -90,36 +39,57 @@ void xActionTrigger(int id=0, int action=0) {
   xActionsFlags[id] = action;
 }
 
-// LOOPING FUNCTIONS
+boolean done;
+void setup() {
+  if (TESTING)
+    done = false;
 
-void loopActionA() {
-        // Do something...
+
+  xActionTrigger(0,1); // sense
+  xActionTrigger(1,1); // scheduleAI
+  xActionTrigger(2,1); // runAI
 }
 
-void loopActionB() {
-	// Do something...
-}
-
-void loopActionC() {
-	// Do something...
+void loop() {
+  if (TESTING)
+  {
+    if (!done)
+      test.testEverything();
+    done = true;
+  }
+  else
+  {
+    xDoActions();
+  }
 }
 
 // Exectute all loop functions.
 void xDoActions() {
-	// Execute all looped function.
-	for(unsigned int j=0; j < xActionsCount; j++) {
-		if( xActionsFlags[j] == 1 ) { // Execute the action if.
-			xActions[j](); // Call the related loop action.
-		}
-	}
+  // Execute all looped function.
+  for(unsigned int j=0; j < xActionsCount; j++) 
+  {
+    if( xActionsFlags[j] == 1 ) 
+      // Execute the action if.
+      xActions[j](); // Call the related loop action.
+  }
 }
 
-void setup() {
-        xActionTrigger(0,1); // First action.
-        xActionTrigger(2,1); // Third action.
+void sense()
+{ 
+  sensor.sense();
 }
 
-void loop() {
-	xDoActions();
+void scheduleAI()
+{
+
 }
+
+
+void runAI()
+{
+
+}
+
+
+
 

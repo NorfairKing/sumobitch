@@ -15,13 +15,22 @@ class Sensor
 {
 public:
   Sensor();
+  void sense();
+  boolean canSeeEnemy();
   boolean isLeftInRing();
   boolean isRightInRing();
-  boolean AnyOutOfRing();
-  int getLDValue();
+  
 private:
+  void senseLD();
+  void senseSD();
+  int ldResults [];
+  int getLDAnalogValue();
+  boolean left;
+  boolean right;
   boolean isLeftOn(); 
   boolean isRightOn();
+  
+  int avg(int array[], int len);
 };
 
 #endif

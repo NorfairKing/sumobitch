@@ -11,4 +11,11 @@
 #define SHORT_RIGHT 8
 #define LONG A1
 
+// Wether the sensor should be on inside the ring
 #define IN_RING_VALUE true
+
+// Define the precision with which to measure long distance values 
+#define PRECISION 25
+
+// Threshold for seeing enemy
+#define THRESHOLD 10

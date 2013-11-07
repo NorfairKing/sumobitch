@@ -8,3 +8,5 @@
 
 // Led pin
 #define LED_PIN 13
+
+#define COUNTDOWN_TIME 5
