@@ -43,8 +43,8 @@ Motor A is Right, motor B is left.
 ** Motor controller
    - Connect the mode pin of the controller to a 5V pin on the arduino 
    - For both motors
-     - Connect the phase pin of the controller with a "~" pin on the arduino
-     - Connect the enable pin of the controller with a digital pin on the arduino
+     - Connect the phase pin of the controller with a digital pin on the arduino
+     - Connect the enable pin of the controller with a "~" pin on the arduino
 ** Sensors
    - Short range
      - Connect the Power pin to the 5V pin on the arduino

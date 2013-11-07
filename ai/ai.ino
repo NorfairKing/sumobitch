@@ -59,7 +59,11 @@ void loop() {
   if (TESTING)
  {
     if (!done)
-      test.testEverything();
+    {
+      //test.testEverything();
+      //motor.test();
+    }
+    
     done = true;
     delay(1000);
  }

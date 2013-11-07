@@ -21,6 +21,8 @@ public:
   void rightForward();
   void rightBack();
   void rightStop();
+  
+  void test();
 };
 
 #endif

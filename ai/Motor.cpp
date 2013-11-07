@@ -18,45 +18,58 @@ Motor::Motor()
   pinMode(RIGHT_PHASE, OUTPUT);
 }
 
+void Motor::test()
+{
+  
+  Serial.println("PHASE: LOW");
+  digitalWrite(LEFT_PHASE, LOW);
+  Serial.print("ENABLE: 0");
+  analogWrite(LEFT_ENABLE, 0);
+  delay(5000);
+  
+  Serial.println("done");
+  
+  Serial.println("PHASE: HIGH");
+  digitalWrite(LEFT_PHASE, HIGH);
+  Serial.print("ENABLE: 0");
+  analogWrite(LEFT_ENABLE, 0);
+  delay(5000);
+  Serial.println("done");
+}
+
 void Motor::leftForward()
 {
-  int fw = 128;
-  digitalWrite(LEFT_ENABLE,HIGH);
-  analogWrite(LEFT_PHASE,fw);
+  digitalWrite(LEFT_PHASE, HIGH);
+  analogWrite(LEFT_ENABLE, FORWARD_VALUE);
 }
 
 void Motor::leftBack()
 {
-  int back = -128;
   digitalWrite(LEFT_ENABLE,HIGH);
-  analogWrite(LEFT_PHASE,back);
+  analogWrite(LEFT_PHASE,BACKWARD_VALUE);
 }
 
 void Motor::leftStop()
 {
-  int stp = 0;
   digitalWrite(LEFT_ENABLE,LOW);
-  analogWrite(LEFT_PHASE,stp);
+  analogWrite(LEFT_PHASE,STOP_VALUE);
 }
 void Motor::rightForward()
 {
-  int fw = 128;
-  digitalWrite(RIGHT_ENABLE,HIGH);
-  analogWrite(RIGHT_PHASE,fw);
+  digitalWrite(RIGHT_PHASE,HIGH);
+  analogWrite(RIGHT_ENABLE, FORWARD_VALUE);
 }
 
 void Motor::rightBack()
 {
-  int back = -128;
   digitalWrite(RIGHT_ENABLE,HIGH);
-  analogWrite(RIGHT_PHASE,back);
+  analogWrite(RIGHT_PHASE,BACKWARD_VALUE);
 }
 
 void Motor::rightStop()
 {
-  int stp = 0;
   digitalWrite(RIGHT_ENABLE,LOW);
-  analogWrite(RIGHT_PHASE,stp);
+  analogWrite(RIGHT_PHASE,STOP_VALUE);
 }
 
 

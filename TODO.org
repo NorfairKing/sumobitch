@@ -2,6 +2,7 @@
 
 * TODO Building
 ** TODO Wiring
+   CLOCK: [2013-11-07 Don 19:05]--[2013-11-07 Don 19:29] =>  0:24
    CLOCK: [2013-11-07 Don 12:31]--[2013-11-07 Don 14:27] =>  1:56
    CLOCK: [2013-11-07 Don 11:46]--[2013-11-07 Don 12:23] =>  0:37
    :PROPERTIES:
