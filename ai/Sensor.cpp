@@ -40,18 +40,18 @@ int Sensor::getLDAnalogValue()
 int Sensor::getAccurateLDValue()
 {
   int results[PRECISION];
-  for (int i=0;i<PRECISION;i++)
+  for (int i=0;i < PRECISION;i++)
   {
     results[i] = getLDAnalogValue();
   }
   
   int res = 0;
-  for( int i=0;i<PRECISION;i++)
+  for( int i=0;i < PRECISION;i++)
   {
     res += results[i];
   }
-  int avg = res/PRECISION;
-  return avg;
+  res = res / PRECISION;
+  return res;
 }
 
 boolean Sensor::isLeftOn()

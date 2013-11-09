@@ -21,17 +21,22 @@ Led led;// Initialize the led
 Test test;// Initialize the tests
 
 boolean done;
+
 void setup() {
   Serial.begin(9600);
   if(TESTING)
   {
     Serial.println("Set up serial");
   }
-
   done = false;
 }
 
 void loop() {
+  if (STOP)
+  {
+    delay(1000);
+    return;
+  }
   if (TESTING)
   {
     if (!done)
@@ -47,10 +52,26 @@ void loop() {
   }
 }
 
+boolean searching = true;
+
 void runAI()
 {
+  searching = !sensor.canSeeEnemy(); 
+  if (searching)
+  {
+    motor.leftForward();
+    motor.rightStop();
+  }
+  else
+  {
+    motor.leftForward();
+    motor.rightForward();
+  }
 
 }
+
+
+
 
 
 

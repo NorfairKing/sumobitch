@@ -9,7 +9,7 @@
 // Sensor pins
 #define SHORT_LEFT 7
 #define SHORT_RIGHT 8
-#define LONG A5
+#define LONG A0
 
 // Wether the sensor should be on inside the ring
 #define IN_RING_VALUE true
@@ -18,4 +18,4 @@
 #define PRECISION 10
 
 // Threshold for seeing enemy
-#define THRESHOLD 20
+#define THRESHOLD 25

@@ -6,6 +6,7 @@
  Tim Gillis
  */
 
-#define TESTING true
+#define TESTING false
+#define STOP true
 
 

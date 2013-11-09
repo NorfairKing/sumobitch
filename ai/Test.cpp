@@ -35,8 +35,8 @@ Test::Test()
 void Test::testEverything()
 {
   Serial.println("Starting tests");
-  testMotors();
-  //testSensors();
+  //testMotors();
+  testSensors();
   //testLed();
   Serial.println("Testing done");
 }
@@ -53,8 +53,8 @@ void Test::testMotors()
 void Test::testSensors()
 {
   Serial.println("Starting sensor tests");
-  testSensorShortLeft();
-  testSensorShortRight();
+  //testSensorShortLeft();
+  //testSensorShortRight();
   testSensorLong();
   Serial.println("Sensor tests done");
 }
