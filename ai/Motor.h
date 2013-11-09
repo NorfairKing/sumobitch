@@ -22,7 +22,7 @@ public:
   void rightBack();
   void rightStop();
   
-  void test();
+  //void test();
 };
 
 #endif

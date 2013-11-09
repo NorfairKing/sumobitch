@@ -15,9 +15,9 @@ class Led
 {
 public:
   Led();
-  void ledOn();
-  void ledOff();
-  void ledCountDown();
+  void On();
+  void Off();
+  void CountDown();
 };
 
 #endif

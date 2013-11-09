@@ -37,7 +37,7 @@ void Test::testEverything()
   Serial.println("Starting tests");
   testMotors();
   //testSensors();
-  testLed();
+  //testLed();
   Serial.println("Testing done");
 }
 
@@ -53,8 +53,8 @@ void Test::testMotors()
 void Test::testSensors()
 {
   Serial.println("Starting sensor tests");
-  //testSensorShortLeft();
-  //testSensorShortRight();
+  testSensorShortLeft();
+  testSensorShortRight();
   testSensorLong();
   Serial.println("Sensor tests done");
 }
@@ -63,12 +63,14 @@ void Test::testLed()
 {
   Serial.println("Starting led tests");
   Serial.println("The led should be on now");
-  led.ledOn(); 
+  led.On(); 
   delay(TEST_SHORT);
   Serial.println("The led should be off now");
-  led.ledOff(); 
+  led.Off(); 
   delay(TEST_SHORT);
   Serial.println("The led should be counting down now");
+  led.CountDown();
+  delay(TEST_SHORT);
   Serial.println("Led tests done");
 }
 
@@ -132,17 +134,17 @@ void Test::testSensorShortLeft()
   Serial.println("For the next ten seconds, you can test the left short-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 1000; i++)
+  for(int i = 0; i < 100; i++)
   {
-    sensor.sense();
+    Serial.print(i);
     boolean result = sensor.isLeftInRing();
     if (result)
     {
-      Serial.println("The left sensor detects that it's inside of the ring.");
+      Serial.println("-> The left sensor detects that it's inside of the ring.");
     }
     else
     {
-      Serial.println("The left sensor detects that it's outside of the ring.");
+      Serial.println("-> The left sensor detects that it's outside of the ring.");
     }
     delay(10);
   }
@@ -155,17 +157,17 @@ void Test::testSensorShortRight()
   Serial.println("For the next ten seconds, you can test the right short-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 1000; i++)
+  for(int i = 0; i < 100; i++)
   {
-    sensor.sense();
+    Serial.print(i);
     boolean result = sensor.isLeftInRing();
     if (result)
     {
-      Serial.println("The right sensor detects that it's inside of the ring.");
+      Serial.println("-> The right sensor detects that it's inside of the ring.");
     }
     else
     {
-      Serial.println("The right sensor detects that it's outside of the ring.");
+      Serial.println("-> The right sensor detects that it's outside of the ring.");
     }
     delay(10);
   }
@@ -177,19 +179,18 @@ void Test::testSensorLong()
   Serial.println("For the next ten seconds, you can test the long-range sensor");
   Serial.println("GO!");
   delay(1000);
-  for(int i = 0; i < 1000; i++)
+  for(int i = 0; i < 100; i++)
   {
-     Serial.print("The long-distance sensor detects a value of ");
-     sensor.sense();
+     Serial.print(i);
      if(sensor.canSeeEnemy())
      {
-       Serial.println("The long-distance sensor sees the enemy");
+       Serial.println("-> The long-distance sensor sees the enemy");
      }
      else
      {
-       Serial.println("The long distance sensor doesn't see anything");
+       Serial.println("-> The long distance sensor doesn't see anything");
      }
-     delay(10);
+     delay(100);
   }
   Serial.println("Long-range sensor tests done");
 }

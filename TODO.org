@@ -8,27 +8,27 @@
    :PROPERTIES:
    :ORDERED:  t
    :END:
-** TODO Motors
-   SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-04 Mon>
+** DONE Motors
+   CLOSED: [2013-11-08 Fre 09:58] SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-18 Mon>
 ** TODO Sensors
-   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
 *** TODO Short Range Sensors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
-*** TODO Long Range Sensor
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
+*** DONE Long Range Sensor
+    CLOSED: [2013-11-08 Fre 09:58] SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
 * Testing
 ** STARTED Level one: Stationary Hardware Interface
-   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
    CLOCK: [2013-11-07 Don 09:41]--[2013-11-07 Don 10:18] =>  0:37
    CLOCK: [2013-11-07 Don 09:26]--[2013-11-07 Don 09:34] =>  0:08
    CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
    CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
    CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58
 *** TODO Motors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
 **** TODO Angular turning method
 *** TODO Sensors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-07 Don>
+    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
 **** TODO Mean evaluated sensor value.
 
 ** TODO Level two: Mobile Movement and Mobile Sensing

@@ -15,26 +15,26 @@ Led::Led()
   pinMode(LED_PIN, OUTPUT);
 }
 
-void Led::ledOn()
+void Led::On()
 {
   digitalWrite(LED_PIN,HIGH);
 }
-void Led::ledOff()
+void Led::Off()
 {
   digitalWrite(LED_PIN,LOW);
 }
 
-void Led::ledCountDown()
+void Led::CountDown()
 {
   // Blink 5 times
-  ledOn();
   for(int i = 0; i < (COUNTDOWN_TIME - 1); i++)
   {
-    delay(1000);
-    ledOff();
-    delay(1000);
-    ledOn();
+    On();
+    delay(500);
+    Off();
+    delay(500);
   }
+  
 }
 
 
