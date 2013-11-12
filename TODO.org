@@ -5,39 +5,33 @@
    CLOCK: [2013-11-07 Don 19:05]--[2013-11-07 Don 19:29] =>  0:24
    CLOCK: [2013-11-07 Don 12:31]--[2013-11-07 Don 14:27] =>  1:56
    CLOCK: [2013-11-07 Don 11:46]--[2013-11-07 Don 12:23] =>  0:37
-   :PROPERTIES:
-   :ORDERED:  t
-   :END:
 ** DONE Motors
-   CLOSED: [2013-11-08 Fre 09:58] SCHEDULED: <2013-11-04 Mon> DEADLINE: <2013-11-18 Mon>
+   CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
 ** TODO Sensors
-   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
+   DEADLINE: <2013-11-18 Mon>
 *** TODO Short Range Sensors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
+    DEADLINE: <2013-11-18 Mon>
 *** DONE Long Range Sensor
-    CLOSED: [2013-11-08 Fre 09:58] SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
-* Testing
+    CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
+
+* TODO Testing
 ** STARTED Level one: Stationary Hardware Interface
-   SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
+   DEADLINE: <2013-11-18 Mon>
    CLOCK: [2013-11-07 Don 09:41]--[2013-11-07 Don 10:18] =>  0:37
    CLOCK: [2013-11-07 Don 09:26]--[2013-11-07 Don 09:34] =>  0:08
    CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
    CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
    CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58
 *** TODO Motors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
+    DEADLINE: <2013-11-18 Mon>
 **** TODO Angular turning method
 *** TODO Sensors
-    SCHEDULED: <2013-11-07 Don> DEADLINE: <2013-11-18 Mon>
-**** TODO Mean evaluated sensor value.
+    DEADLINE: <2013-11-18 Mon>
+**** DONE Mean evaluated sensor value.
+     CLOSED: [2013-11-11 Mon 19:09]
 
 ** TODO Level two: Mobile Movement and Mobile Sensing
-   SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
 ** TODO Level three: AI vs Stationary Opponent
-*** TODO Shedule this
-    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
-** TxODO Level four: AI vs AI
-*** TODO Shedule this
-    SCHEDULED: <2013-11-10 Son> DEADLINE: <2013-11-10 Son>
+** TODO Level four: AI vs AI
     
     
