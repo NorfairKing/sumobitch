@@ -15,6 +15,7 @@
 #define IN_RING_VALUE true
 
 // Define the precision with which to measure long distance values 
+// This works best if this number is an odd number
 #define PRECISION 10
 
 // Threshold for seeing enemy
