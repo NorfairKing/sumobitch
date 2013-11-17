@@ -1,5 +1,19 @@
 #+SEQ_TODO: TODO(t) TODAY(o) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
 
+#+BEGIN: clocktable :maxlevel 5 :scope file
+Clock summary at [2013-11-17 Sun 11:24]
+
+| Headline                             |   Time |      |
+|--------------------------------------+--------+------|
+| *Total time*                         | *4:46* |      |
+|--------------------------------------+--------+------|
+| TODO Building                        |   2:57 |      |
+| \__ TODO Wiring                      |        | 2:57 |
+| TODO Testing                         |   1:49 |      |
+| \__ STARTED Level one: Stationary... |        | 1:49 |
+#+END:
+
+
 * TODO Building
 ** TODO Wiring
    CLOCK: [2013-11-07 Don 19:05]--[2013-11-07 Don 19:29] =>  0:24
@@ -8,25 +22,20 @@
 ** DONE Motors
    CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
 ** TODO Sensors
-   DEADLINE: <2013-11-18 Mon>
 *** TODO Short Range Sensors
-    DEADLINE: <2013-11-18 Mon>
 *** DONE Long Range Sensor
     CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
 
 * TODO Testing
 ** STARTED Level one: Stationary Hardware Interface
-   DEADLINE: <2013-11-18 Mon>
    CLOCK: [2013-11-07 Don 09:41]--[2013-11-07 Don 10:18] =>  0:37
    CLOCK: [2013-11-07 Don 09:26]--[2013-11-07 Don 09:34] =>  0:08
    CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
    CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
    CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58
 *** TODO Motors
-    DEADLINE: <2013-11-18 Mon>
 **** TODO Angular turning method
 *** TODO Sensors
-    DEADLINE: <2013-11-18 Mon>
 **** DONE Mean evaluated sensor value.
      CLOSED: [2013-11-11 Mon 19:09]
 
