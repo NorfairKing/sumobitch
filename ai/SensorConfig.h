@@ -16,7 +16,8 @@
 
 // Define the precision with which to measure long distance values 
 // This works best if this number is an odd number
-#define PRECISION 10
+#define PRECISION 5
 
 // Threshold for seeing enemy
 #define THRESHOLD 25
+
