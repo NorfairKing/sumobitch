@@ -7,6 +7,3 @@
  */
 
 #define TESTING false
-#define STOP false
-
-

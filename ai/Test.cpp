@@ -63,13 +63,13 @@ void Test::testLed()
 {
   Serial.println("Starting led tests");
   Serial.println("The led should be on now");
-  led.On(); 
+  led.on(); 
   delay(TEST_SHORT);
   Serial.println("The led should be off now");
-  led.Off(); 
+  led.off(); 
   delay(TEST_SHORT);
   Serial.println("The led should be counting down now");
-  led.CountDown();
+  led.countdown();
   delay(TEST_SHORT);
   Serial.println("Led tests done");
 }

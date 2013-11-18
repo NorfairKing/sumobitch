@@ -33,10 +33,10 @@ void setup() {
 }
 
 void loop() {
-  if (STOP)
+  if(!(TESTING || started))
   {
-    delay(1000);
-    return;
+     led.countdown();
+     started = true; 
   }
   if (TESTING)
   {
