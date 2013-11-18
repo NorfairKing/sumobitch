@@ -14,8 +14,10 @@ FastRunningMedian<int,32, 0> medianThingy;
 
 Sensor::Sensor()
 {
-  pinMode(SHORT_LEFT, INPUT);
-  pinMode(SHORT_RIGHT, INPUT);
+  pinMode(SHORT_FRONT_LEFT, INPUT);
+  pinMode(SHORT_FRONT_RIGHT, INPUT);
+  pinMode(SHORT_BACK_LEFT, INPUT);
+  pinMode(SHORT_BACK_RIGHT, INPUT);
   pinMode(LONG, INPUT);
 }
 
@@ -24,14 +26,29 @@ boolean Sensor::canSeeEnemy()
   return getAccurateLDValue() > THRESHOLD;
 }
 
-boolean Sensor::isLeftInRing()
+boolean Sensor::isFrontLeftInRing()
 {
-  return isLeftOn() == IN_RING_VALUE;
+  return isFrontLeftOn() == IN_RING_VALUE;
 }
 
-boolean Sensor::isRightInRing()
+boolean Sensor::isFrontRightInRing()
 {
-  return isRightOn() == IN_RING_VALUE; 
+  return isFrontRightOn() == IN_RING_VALUE; 
+}
+
+boolean Sensor::isBackLeftInRing()
+{
+  return isBackLeftOn() == IN_RING_VALUE;
+}
+
+boolean Sensor::isBackRightInRing()
+{
+  return isBackRightOn() == IN_RING_VALUE; 
+}
+
+boolean Sensor::isAnyOutOfRing()
+{
+  return !isFrontLeftInRing() || !isFrontRightInRing() || !isBackLeftInRing() || !isBackRightInRing();
 }
 
 int Sensor::getLDAnalogValue()
@@ -41,41 +58,39 @@ int Sensor::getLDAnalogValue()
 
 int Sensor::getAccurateLDValue()
 {
-  for (int i=0;i < PRECISION;i++)
+  int first = getLDAnalogValue();
+  int second = getLDAnalogValue();
+  int third = getLDAnalogValue();
+  int value = (first+second+third)/3;
+  Serial.println(value);
+  return value;
+  /*for (int i=0;i < PRECISION;i++)
   {
     int result = getLDAnalogValue();
     medianThingy.addValue(result);
   }
-  return medianThingy.getMedian();
-
-  // ....
-  // myMedian.addValue(value); // adds a value
-  // m = myMedian.getMedian(); // retieves the median
-  /*
-  int results[PRECISION];
-  for (int i=0;i < PRECISION;i++)
-  {
-    results[i] = getLDAnalogValue();
-  }
-  
-  int res = 0;
-  for( int i=0;i < PRECISION;i++)
-  {
-    res += results[i];
-  }
-  res = res / PRECISION;
-  return res;
-  */
+  int accurateValue = medianThingy.getMedian();
+  return accurateValue;*/
 }
 
-boolean Sensor::isLeftOn()
+boolean Sensor::isFrontLeftOn()
 {
-  return digitalRead(SHORT_LEFT) == HIGH;
+  return digitalRead(SHORT_FRONT_LEFT) == HIGH;
 }
 
-boolean Sensor::isRightOn()
+boolean Sensor::isFrontRightOn()
 {
-  return digitalRead(SHORT_RIGHT) == HIGH;
+  return digitalRead(SHORT_FRONT_RIGHT) == HIGH;
+}
+
+boolean Sensor::isBackLeftOn()
+{
+  return digitalRead(SHORT_BACK_LEFT) == HIGH;
+}
+
+boolean Sensor::isBackRightOn()
+{
+  return digitalRead(SHORT_BACK_RIGHT) == HIGH;
 }
 
 

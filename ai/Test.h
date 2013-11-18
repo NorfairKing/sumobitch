@@ -24,8 +24,10 @@ private:
   void testMotorLeft();
   void testMotorRight();
   void testMotorTogether();
-  void testSensorShortLeft();
-  void testSensorShortRight();
+  void testSensorShortFrontLeft();
+  void testSensorShortFrontRight();
+  void testSensorShortBackLeft();
+  void testSensorShortBackRight();
   void testSensorLong();
 };
 

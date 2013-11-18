@@ -47,10 +47,7 @@ void loop() {
     done = true;
     delay(1000);
   }
-  else
-  {
-    runAI();
-  }
+  else runAI();
 }
 
 boolean searching = true;
@@ -58,10 +55,16 @@ boolean searching = true;
 void runAI()
 {
   searching = !sensor.canSeeEnemy(); 
+  boolean anyOutOfRing = sensor.isAnyOutOfRing();
+  if(anyOutOfRing){
+    motor.leftStop();
+    motor.rightStop();
+  }
+  else 
   if (searching)
   {
     motor.leftForward();
-    motor.rightStop();
+    motor.rightBack();
   }
   else
   {

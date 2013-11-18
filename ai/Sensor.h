@@ -16,14 +16,18 @@ class Sensor
 public:
   Sensor();
   boolean canSeeEnemy();
-  boolean isLeftInRing();
-  boolean isRightInRing();
-  
+  boolean isFrontLeftInRing();
+  boolean isFrontRightInRing();
+  boolean isBackLeftInRing();
+  boolean isBackRightInRing();
+  boolean isAnyOutOfRing();
 private:
   int getLDAnalogValue();
   int getAccurateLDValue();
-  boolean isLeftOn();
-  boolean isRightOn();
+  boolean isFrontLeftOn();
+  boolean isFrontRightOn();
+  boolean isBackLeftOn();
+  boolean isBackRightOn();
 };
 #endif
 
