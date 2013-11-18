@@ -9,8 +9,6 @@
 #include "Arduino.h"
 #include "SensorConfig.h"
 #include "Sensor.h"
-#include "FastRunningMedian.h"
-FastRunningMedian<int,32, 0> medianThingy;
 
 Sensor::Sensor()
 {
@@ -58,19 +56,20 @@ int Sensor::getLDAnalogValue()
 
 int Sensor::getAccurateLDValue()
 {
-  int first = getLDAnalogValue();
-  int second = getLDAnalogValue();
-  int third = getLDAnalogValue();
-  int value = (first+second+third)/3;
-  Serial.println(value);
-  return value;
-  /*for (int i=0;i < PRECISION;i++)
+  int results[PRECISION];
+  for (int i=0;i < PRECISION;i++)
   {
-    int result = getLDAnalogValue();
-    medianThingy.addValue(result);
+    results[i] = getLDAnalogValue();
   }
-  int accurateValue = medianThingy.getMedian();
-  return accurateValue;*/
+  
+  int res = 0;
+  for( int i=0;i < PRECISION;i++)
+  {
+    res += results[i];
+  }
+  res = res / PRECISION;
+  Serial.println(res);
+  return res;
 }
 
 boolean Sensor::isFrontLeftOn()

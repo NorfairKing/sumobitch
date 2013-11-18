@@ -24,9 +24,9 @@ boolean done;
 boolean started;
 
 void setup() {
-  Serial.begin(9600);
   if(TESTING)
   {
+    Serial.begin(9600);
     Serial.println("Set up serial");
   }
   done = false;
