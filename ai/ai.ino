@@ -21,6 +21,7 @@ Led led;// Initialize the led
 Test test;// Initialize the tests
 
 boolean done;
+boolean started;
 
 void setup() {
   Serial.begin(9600);
