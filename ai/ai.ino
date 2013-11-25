@@ -22,20 +22,13 @@ Led led;// Initialize the led
 
 //Initialize states
 State starting = State(start);
-State looking = State(look);
-State attacking = State(attack);
+State looking = State(look_in,look,look_out);
+State attacking = State(attack_in,attack,attack_out);
 State panicking = State(panic_in,panic,panic_out);
 
-FSM sumorobot = FSM(looking);
-
-
-boolean done;
-boolean started;
+FSM sumorobot = FSM(starting);
 
 void setup() {
-  Serial.begin(9600);
-  started = false;
-  sumorobot.transitionTo(starting);
   sumorobot.update();
 }
 
@@ -65,14 +58,20 @@ void runAI()
 void start(){
   led.countdown();
 }
+void look_in(){}
 void look(){
   motor.leftForward();
   motor.rightBack();
 }
+void look_out(){}
+
+void attack_in(){}
 void attack(){
   motor.leftForward();
   motor.rightForward();
 }
+void attack_out(){}
+
 void panic_in(){
   led.on();
 }
