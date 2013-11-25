@@ -11,6 +11,7 @@
 #include "Motor.h"// Import the motor class.
 #include "Sensor.h"// Import the sensor class.
 #include "Led.h"// Import the led class.
+#include "FiniteStateMachine.h" // Import the FSM class
 
 #include "Test.h"// Import the test class.
 

@@ -1,46 +1,42 @@
-#+SEQ_TODO: TODO(t) TODAY(o) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
+#+SEQ_TODO: TODO(t) STARTED(s) WAITING(w) | DONE(d) CANCELLED(c) DELEGATED(l)
 
-#+BEGIN: clocktable :maxlevel 5 :scope file
-Clock summary at [2013-11-17 Sun 11:24]
-
-| Headline                             |   Time |      |
-|--------------------------------------+--------+------|
-| *Total time*                         | *4:46* |      |
-|--------------------------------------+--------+------|
-| TODO Building                        |   2:57 |      |
-| \__ TODO Wiring                      |        | 2:57 |
-| TODO Testing                         |   1:49 |      |
-| \__ STARTED Level one: Stationary... |        | 1:49 |
-#+END:
-
-
-* TODO Building
-** TODO Wiring
+* DONE Building
+  CLOSED: [2013-11-19 Tue 00:22]
+** DONE Wiring
+   CLOSED: [2013-11-19 Tue 00:21]
    CLOCK: [2013-11-07 Don 19:05]--[2013-11-07 Don 19:29] =>  0:24
    CLOCK: [2013-11-07 Don 12:31]--[2013-11-07 Don 14:27] =>  1:56
    CLOCK: [2013-11-07 Don 11:46]--[2013-11-07 Don 12:23] =>  0:37
 ** DONE Motors
    CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
-** TODO Sensors
-*** TODO Short Range Sensors
+** DONE Sensors
+   CLOSED: [2013-11-19 Tue 00:21]
+*** DONE Short Range Sensors
+    CLOSED: [2013-11-19 Tue 00:21]
 *** DONE Long Range Sensor
     CLOSED: [2013-11-08 Fre 09:58] DEADLINE: <2013-11-18 Mon>
 
-* TODO Testing
-** STARTED Level one: Stationary Hardware Interface
+* DONE Testing
+  CLOSED: [2013-11-20 Wed 20:11]
+** DONE Level one: Stationary Hardware Interface
+   CLOSED: [2013-11-19 Tue 00:21]
    CLOCK: [2013-11-07 Don 09:41]--[2013-11-07 Don 10:18] =>  0:37
    CLOCK: [2013-11-07 Don 09:26]--[2013-11-07 Don 09:34] =>  0:08
    CLOCK: [2013-11-06 Mit 19:48]--[2013-11-06 Mit 19:52] =>  0:04
    CLOCK: [2013-11-06 Mit 19:34]--[2013-11-06 Mit 19:36] =>  0:02
    CLOCK: [2013-11-06 Mit 18:36]--[2013-11-06 Mit 19:34] =>  0:58
-*** TODO Motors
-**** TODO Angular turning method
-*** TODO Sensors
+*** DONE Motors
+    CLOSED: [2013-11-20 Wed 20:11]
+**** CANCELLED Angular turning method
+     CLOSED: [2013-11-20 Wed 20:11]
+*** DONE Sensors
+    CLOSED: [2013-11-20 Wed 20:11]
 **** DONE Mean evaluated sensor value.
      CLOSED: [2013-11-11 Mon 19:09]
 
-** TODO Level two: Mobile Movement and Mobile Sensing
-** TODO Level three: AI vs Stationary Opponent
+** DONE Level two: Mobile Movement and Mobile Sensing
+   CLOSED: [2013-11-19 Tue 00:21]
+** STARTED Level three: AI vs Stationary Opponent
 ** TODO Level four: AI vs AI
     
     

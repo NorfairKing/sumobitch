@@ -1,4 +1,4 @@
-/*
+ /*
   SUMOBITCH Program
  
  Auhtors:
