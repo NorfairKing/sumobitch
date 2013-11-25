@@ -19,63 +19,52 @@ Motor motor;//Initialize the motors
 Sensor sensor;// Initialize the sensors
 Led led;// Initialize the led
 
-Test test;// Initialize the tests
+
+//Initialize states
+State starting = State(start);
+State looking = State(look);
+State attacking = State(attack);
+State panicking = State(panic);
+
+FSM sumorobot = FSM(starting);
+
 
 boolean done;
 boolean started;
 
 void setup() {
-  if(TESTING)
-  {
-    Serial.begin(9600);
-    Serial.println("Set up serial");
-  }
-  done = false;
 }
 
 void loop() {
-  if(!(TESTING || started))
-  {
-     led.countdown();
-     started = true; 
-  }
-  if (TESTING)
-  {
-    if (!done)
-    {
-      test.testEverything();
-    }
-    done = true;
-    delay(1000);
-  }
-  else runAI();
+  runAI();
 }
 
-boolean searching = true;
 
 void runAI()
 {
-  searching = !sensor.canSeeEnemy(); 
   boolean anyOutOfRing = sensor.isAnyOutOfRing();
-  if(anyOutOfRing){
-    motor.leftStop();
-    motor.rightStop();
-  }
-  else 
-  if (searching)
-  {
-    motor.leftForward();
-    motor.rightBack();
-  }
-  else
-  {
-    motor.leftForward();
-    motor.rightForward();
-  }
-
+  if(anyOutOfRing){sumorobot.transitionTo(panicking);}
+  boolean sees = sensor.canSeeEnemy();
+  if (sees){sumorobot.transitionTo(attacking);}
+  sumorobot.update();
 }
 
-
+void start(){
+  led.countdown();
+  sumorobot.transitionTo(looking);
+}
+void look(){
+  motor.leftForward();
+  motor.rightBack();
+}
+void attack(){
+  motor.leftForward();
+  motor.rightForward();
+}
+void panic(){
+  motor.leftStop();
+  motor.rightStop();
+}
 
 
 
