@@ -24,15 +24,19 @@ Led led;// Initialize the led
 State starting = State(start);
 State looking = State(look);
 State attacking = State(attack);
-State panicking = State(panic);
+State panicking = State(panic_in,panic,panic_out);
 
-FSM sumorobot = FSM(starting);
+FSM sumorobot = FSM(looking);
 
 
 boolean done;
 boolean started;
 
 void setup() {
+  Serial.begin(9600);
+  started = false;
+  sumorobot.transitionTo(starting);
+  sumorobot.update();
 }
 
 void loop() {
@@ -42,16 +46,24 @@ void loop() {
 
 void runAI()
 {
-  boolean anyOutOfRing = sensor.isAnyOutOfRing();
-  if(anyOutOfRing){sumorobot.transitionTo(panicking);}
-  boolean sees = sensor.canSeeEnemy();
-  if (sees){sumorobot.transitionTo(attacking);}
   sumorobot.update();
+  boolean anyOutOfRing = sensor.isAnyOutOfRing();
+  if(anyOutOfRing){
+    sumorobot.transitionTo(panicking);
+  }
+  else{
+    boolean sees = sensor.canSeeEnemy();
+    if (sees){
+      sumorobot.transitionTo(attacking);
+    }
+    else {
+      sumorobot.transitionTo(looking);
+    }
+  }
 }
 
 void start(){
   led.countdown();
-  sumorobot.transitionTo(looking);
 }
 void look(){
   motor.leftForward();
@@ -61,10 +73,27 @@ void attack(){
   motor.leftForward();
   motor.rightForward();
 }
-void panic(){
-  motor.leftStop();
-  motor.rightStop();
+void panic_in(){
+  led.on();
 }
+void panic(){
+  if(sensor.isAnyFrontOutOfRing()){
+    motor.leftBack();
+    motor.rightBack();
+    delay(250);
+  }
+  else if (sensor.isAnyBackOutOfRing()){
+    motor.leftForward();
+    motor.rightForward();
+    delay(250);
+  }
+
+}
+void panic_out(){
+  led.off();
+}
+
+
 
 
 

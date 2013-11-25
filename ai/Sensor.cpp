@@ -49,6 +49,16 @@ boolean Sensor::isAnyOutOfRing()
   return !isFrontLeftInRing() || !isFrontRightInRing() || !isBackLeftInRing() || !isBackRightInRing();
 }
 
+boolean Sensor::isAnyFrontOutOfRing()
+{
+  return !isFrontLeftInRing() || !isFrontRightInRing();
+}
+
+boolean Sensor::isAnyBackOutOfRing()
+{
+  return !isBackLeftInRing() || !isBackRightInRing();
+}
+
 int Sensor::getLDAnalogValue()
 {
   return analogRead(LONG); 

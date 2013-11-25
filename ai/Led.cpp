@@ -27,7 +27,7 @@ void Led::off()
 void Led::countdown()
 {
   // Blink 5 times
-  for(int i = 0; i < COUNTDOWN_TIME; i++)
+  for(int i = 0; i < (COUNTDOWN_TIME-1); i++)
   {
     on();
     delay(500);

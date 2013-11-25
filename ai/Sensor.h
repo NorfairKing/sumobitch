@@ -21,9 +21,11 @@ public:
   boolean isBackLeftInRing();
   boolean isBackRightInRing();
   boolean isAnyOutOfRing();
+  boolean isAnyFrontOutOfRing();
+  boolean isAnyBackOutOfRing();
+  int getAccurateLDValue();
 private:
   int getLDAnalogValue();
-  int getAccurateLDValue();
   boolean isFrontLeftOn();
   boolean isFrontRightOn();
   boolean isBackLeftOn();
