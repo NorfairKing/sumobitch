@@ -14,7 +14,7 @@
 #define LONG A2
 
 // Wether the sensor should be on inside the ring
-#define IN_RING_VALUE true
+#define IN_RING_VALUE false
 
 // Define the precision with which to measure long distance values 
 // This works best if this number is an odd number
