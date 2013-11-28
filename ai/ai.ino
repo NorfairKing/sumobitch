@@ -43,54 +43,90 @@ void runAI()
   boolean anyOutOfRing = sensor.isAnyOutOfRing();
   if(anyOutOfRing){
     sumorobot.transitionTo(panicking);
+    return;
   }
-  else{
-    boolean sees = sensor.canSeeEnemy();
-    if (sees){
-      sumorobot.transitionTo(attacking);
-    }
-    else {
-      sumorobot.transitionTo(looking);
-    }
+
+  boolean sees = sensor.canSeeEnemy();
+  if (sees){
+    sumorobot.transitionTo(attacking);
   }
+  else {
+    sumorobot.transitionTo(looking);
+  }
+
 }
 
 void start(){
   led.countdown();
 }
-void look_in(){}
+void look_in(){
+}
 void look(){
   motor.leftForward();
   motor.rightBack();
 }
-void look_out(){}
+void look_out(){
+}
 
-void attack_in(){}
+void attack_in(){
+}
 void attack(){
   motor.leftForward();
   motor.rightForward();
 }
-void attack_out(){}
+void attack_out(){
+}
 
 void panic_in(){
   led.on();
 }
 void panic(){
+  /*
   if(sensor.isAnyFrontOutOfRing()){
     motor.leftBack();
     motor.rightBack();
-    delay(250);
+    delay(500);
   }
   else if (sensor.isAnyBackOutOfRing()){
     motor.leftForward();
     motor.rightForward();
+    delay(500);
+  }
+  */
+  panicLeft();
+  panicRight();
+}
+
+void panicLeft(){
+  if(!sensor.isFrontLeftInRing()){
+    motor.leftBack();
+    motor.rightBack();
+    delay(250);
+    motor.leftForward();
+    motor.rightBack();
     delay(250);
   }
-
+  else {
+    motor.leftForward();
+  }
+}
+void panicRight(){
+  if(!sensor.isFrontRightInRing()){
+    motor.leftBack();
+    motor.rightBack();
+    delay(250);
+    motor.rightForward();
+    motor.leftBack();
+    delay(250);
+  }
+  else {
+    motor.rightForward();
+  }
 }
 void panic_out(){
   led.off();
 }
+
 
 
 
