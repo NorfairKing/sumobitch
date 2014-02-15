@@ -71,6 +71,3 @@ Motor A is Right, motor B is left.
   - SensorConfig.h
   - Test.cpp
   - Test.h
-
-* Known Issues
-  Nothing works yet.
